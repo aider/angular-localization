@@ -7,8 +7,8 @@ angular.module('ngLocalize')
             bundles,
             cookieStore;
 
-        if (localeConf.persistSelection && $injector.has('$cookieStore')) {
-            cookieStore = $injector.get('$cookieStore');
+        if (localeConf.persistSelection && $injector.has('$cookies')) {
+            cookieStore = $injector.get('$cookies');
         }
 
         function isToken(str) {
